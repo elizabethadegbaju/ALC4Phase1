@@ -12,6 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Handler;
 import android.view.View;
 import android.webkit.SslErrorHandler;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -31,6 +32,8 @@ public class AboutActivity extends AppCompatActivity {
                 handler.proceed();
             }
         });
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         webView.loadUrl("https://andela.com/alc");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
