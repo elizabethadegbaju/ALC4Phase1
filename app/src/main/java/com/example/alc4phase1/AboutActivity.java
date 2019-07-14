@@ -31,6 +31,7 @@ public class AboutActivity extends AppCompatActivity {
                 handler.proceed();
             }
         });
+        webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("https://andela.com/alc");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
